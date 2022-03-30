@@ -4,11 +4,10 @@ void main() => runApp(
       MaterialApp(
         home: Scaffold(
           body: Center(
-            child: Container(
-              child: OutlineButton(
-                child: Text("click me"),
-                onPressed: () {},
-              ),
+            child: IconButton(
+              iconSize: 70,
+              icon: Icon(Icons.alarm),
+              onPressed: () {},
             ),
           ),
         ),
