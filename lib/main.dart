@@ -5,7 +5,7 @@ void main() => runApp(
         home: Scaffold(
           body: Center(
             child: Container(
-              child: TextButton(
+              child: OutlineButton(
                 child: Text("click me"),
                 onPressed: () {},
               ),
