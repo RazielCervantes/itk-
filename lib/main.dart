@@ -4,18 +4,13 @@ void main() => runApp(
       MaterialApp(
         home: Scaffold(
           body: Center(
-              child: Container(
-            height: 70,
-            width: 200,
-            child: ElevatedButton(
-              child: Text(
-                "click me",
-                style: TextStyle(fontSize: 40),
+            child: Container(
+              child: TextButton(
+                child: Text("click me"),
+                onPressed: () {},
               ),
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(primary: Colors.red),
             ),
-          )),
+          ),
         ),
       ),
     );
