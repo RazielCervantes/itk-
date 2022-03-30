@@ -4,32 +4,51 @@ import 'package:flutter/material.dart';
 void main() => runApp(
       MaterialApp(
         home: Scaffold(
-          backgroundColor: Colors.amber[200],
-          body: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  height: 158,
-                  width: 158,
-                  child: Image.asset("images/1.png"),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(2),
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                child: Image.asset("images/2.jpg"),
+              ),
+              Container(
+                height: 50,
+                width: 350,
+                child: OutlinedButton(
                   child: Text(
-                    "learning flutter",
-                    style: TextStyle(fontSize: 30),
+                    "Continue with google",
+                    style: TextStyle(fontSize: 26, color: Colors.black),
                   ),
+                  style: OutlinedButton.styleFrom(
+                      side: BorderSide(width: 1.0, color: Colors.black)),
+                  onPressed: () {},
                 ),
-                Padding(
-                  padding: EdgeInsets.all(5),
-                  child: Text(
-                    "learn how to make apps with flutter",
-                    style: TextStyle(fontSize: 15),
-                  ),
+              ),
+              Container(
+                height: 50,
+                width: 350,
+                child: ElevatedButton(
+                  child: Text("Continue with Facebook",
+                      style: TextStyle(fontSize: 26)),
+                  onPressed: () {},
                 ),
-              ],
-            ),
+              ),
+              Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      "By signing up you're accepting our terms and conditions",
+                      style: TextStyle(fontSize: 18),
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(
+                      height: 14,
+                    )
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
       ),
