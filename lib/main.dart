@@ -3,12 +3,20 @@ import 'package:flutter/material.dart';
 void main() => runApp(
       MaterialApp(
         home: Scaffold(
-          body: Center(
-            child: IconButton(
-              iconSize: 70,
-              icon: Icon(Icons.alarm),
-              onPressed: () {},
-            ),
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Center(
+                child: Image.asset("images/1.png"),
+              ),
+              Padding(
+                padding: EdgeInsets.all(20),
+                child: Text(
+                  "learning flutter",
+                  style: TextStyle(fontSize: 30),
+                ),
+              ),
+            ],
           ),
         ),
       ),
