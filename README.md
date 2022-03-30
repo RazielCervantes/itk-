@@ -1,6 +1,5 @@
-
-# task 2
+ task 3
 
 ## Screenshot 
 
- ![screen2](Screenshots/screen_2_display_image.png)
+ ![screen3](Screenshots/screen_3_display__circle_image.png)
