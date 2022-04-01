@@ -4,49 +4,25 @@ import 'package:flutter/material.dart';
 void main() => runApp(
       MaterialApp(
         home: Scaffold(
-          body: Column(
+          body: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Container(
-                child: Image.asset("images/2.jpg"),
+              SizedBox(
+                height: 30,
               ),
               Container(
-                height: 50,
-                width: 350,
-                child: OutlinedButton(
-                  child: Text(
-                    "Continue with google",
-                    style: TextStyle(fontSize: 26, color: Colors.black),
-                  ),
-                  style: OutlinedButton.styleFrom(
-                      side: BorderSide(width: 1.0, color: Colors.black)),
-                  onPressed: () {},
-                ),
+                height: 120,
+                width: 120,
+                child: Image.asset("images/1.png"),
               ),
-              Container(
-                height: 50,
-                width: 350,
-                child: ElevatedButton(
-                  child: Text("Continue with Facebook",
-                      style: TextStyle(fontSize: 26)),
-                  onPressed: () {},
-                ),
+              Text(
+                "Learning flutter",
+                style: TextStyle(fontSize: 26),
               ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Text(
-                      "By signing up you're accepting our terms and conditions",
-                      style: TextStyle(fontSize: 18),
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(
-                      height: 14,
-                    )
-                  ],
-                ),
+              IconButton(
+                iconSize: 34,
+                icon: Icon(Icons.thumb_up_alt_outlined),
+                onPressed: () {},
               ),
             ],
           ),
