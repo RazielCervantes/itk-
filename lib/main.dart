@@ -5,7 +5,7 @@ void main() => runApp(
       MaterialApp(
         home: Scaffold(
           body: Center(
-            child: Container(
+            child: SizedBox(
               height: 80,
               width: 350,
               child: OutlinedButton(
@@ -13,12 +13,12 @@ void main() => runApp(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Container(
+                    SizedBox(
                       height: 50,
                       width: 50,
                       child: Image.asset("images/3.png"),
                     ),
-                    Text(
+                    const Text(
                       "Continue with Google",
                       style: TextStyle(
                           fontSize: 24,
