@@ -2,4 +2,4 @@
 
 ## Screenshot 
 
- ![screen12](Screenshots/12_Row_Google_Login.png)
+ ![screen12](Screenshots/screen_12_Row_Google_Login.png)
