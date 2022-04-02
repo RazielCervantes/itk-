@@ -4,151 +4,59 @@ import 'package:flutter/material.dart';
 void main() => runApp(
       MaterialApp(
         home: Scaffold(
-          body: Center(
-            child: Container(
-              height: 700,
-              width: 380,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Container(
-                        height: 166,
-                        width: 166,
-                        color: Colors.grey[200],
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              height: 70,
-                              child: Image.asset("images/5.png"),
-                            ),
-                            Text(
-                              "Facebook",
-                              style: TextStyle(fontSize: 20),
-                            ),
-                          ],
-                        ),
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(child: Image.asset("images/food.jpg")),
+              Container(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Deep dish pizza Chicago",
+                            style: TextStyle(
+                                fontSize: 22, fontWeight: FontWeight.w600),
+                          ),
+                          Text(
+                            "30 mins",
+                            style: TextStyle(fontSize: 16),
+                          )
+                        ],
                       ),
-                      Container(
-                        height: 166,
-                        width: 166,
-                        color: Colors.grey[200],
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              height: 15,
-                            ),
-                            Container(
-                                height: 50, child: Image.asset("images/6.png")),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              "Twitter",
-                              style: TextStyle(fontSize: 20),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Container(
-                        height: 166,
-                        width: 166,
-                        color: Colors.grey[200],
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              height: 70,
-                              child: Image.asset("images/4.png"),
-                            ),
-                            Text(
-                              "Instagram",
-                              style: TextStyle(fontSize: 20),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        height: 166,
-                        width: 166,
-                        color: Colors.grey[200],
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Container(
-                                height: 56, child: Image.asset("images/9.png")),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Text(
-                              "YouTube",
-                              style: TextStyle(fontSize: 20),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Container(
-                        height: 166,
-                        width: 166,
-                        color: Colors.grey[200],
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                              height: 70,
-                              child: Image.asset("images/8.png"),
-                            ),
-                            Text(
-                              "Share This App",
-                              style: TextStyle(fontSize: 20),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        height: 166,
-                        width: 166,
-                        color: Colors.grey[200],
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
-                                height: 70, child: Image.asset("images/7.png")),
-                            Text(
-                              "Rate This App",
-                              style: TextStyle(fontSize: 20),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+                    ),
+                    IconButton(
+                      iconSize: 36,
+                      icon: Icon(Icons.favorite_border),
+                      onPressed: () {},
+                    )
+                  ],
+                ),
               ),
-            ),
+              Container(
+                padding: EdgeInsets.all(8),
+                child: Text(
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et ex aliquet urna gravida aliquet. Ut iaculis, ipsum a convallis porttitor, ligula dui pulvinar velit, vel molestie libero felis sed metus. Morbi euismod odio leo, ut ornare purus dignissim a. Sed diam sapien, euismod vitae interdum vitae, maximus id felis. Nunc vitae sem urna. Donec sed justo vel sem consectetur ullamcorper sed quis risus. Nunc id iaculis dolor. Donec fringilla magna lobortis erat mollis, et egestas turpis fringilla. Vivamus enim ipsum, viverra vitae risus a, semper tempus erat. Vivamus nec maximus elit. Morbi scelerisque pharetra feugiat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt est sit amet risus blandit, sit amet faucibus magna varius. Sed feugiat purus nec nisl vestibulum sollicitudin. Morbi tincidunt nulla a velit sagittis, vitae feugiat odio volutpat. Phasellus a ultrices nisi. Proin efficitur ut diam vitae congue. Etiam condimentum massa non vulputate feugiat. Quisque a lectus vitae lorem luctus tempor et sed orci. Aliquam interdum blandit tellus, finibus euismod lectus molestie at."),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                height: 60,
+                width: 350,
+                child: ElevatedButton(
+                  child: Text(
+                    "SHARE",
+                    style: TextStyle(fontSize: 24),
+                  ),
+                  onPressed: () {},
+                ),
+              ),
+            ],
           ),
         ),
       ),
