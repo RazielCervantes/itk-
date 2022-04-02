@@ -6,54 +6,146 @@ void main() => runApp(
         home: Scaffold(
           body: Center(
             child: Container(
-              height: 340,
-              width: 340,
-              color: Colors.grey[200],
+              height: 700,
+              width: 380,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  SizedBox(
-                    height: 15,
-                  ),
-                  SizedBox(
-                    height: 140,
-                    width: 140,
-                    child: Image.asset("images/1.png"),
-                  ),
-                  Text(
-                    "APPMAKING.COM",
-                    style: TextStyle(fontSize: 26),
-                  ),
-                  Text(
-                    "follow us",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  SizedBox(
-                    width: 260,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        SizedBox(
-                          height: 50,
-                          child: Image.asset("images/5.png"),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        height: 166,
+                        width: 166,
+                        color: Colors.grey[200],
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: 70,
+                              child: Image.asset("images/5.png"),
+                            ),
+                            Text(
+                              "Facebook",
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ],
                         ),
-                        SizedBox(
-                          height: 40,
-                          child: Image.asset("images/6.png"),
+                      ),
+                      Container(
+                        height: 166,
+                        width: 166,
+                        color: Colors.grey[200],
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              height: 15,
+                            ),
+                            Container(
+                                height: 50, child: Image.asset("images/6.png")),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Twitter",
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ],
                         ),
-                        SizedBox(
-                          height: 54,
-                          child: Image.asset("images/4.png"),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                  SizedBox(
-                    height: 6,
-                  )
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        height: 166,
+                        width: 166,
+                        color: Colors.grey[200],
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: 70,
+                              child: Image.asset("images/4.png"),
+                            ),
+                            Text(
+                              "Instagram",
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 166,
+                        width: 166,
+                        color: Colors.grey[200],
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Container(
+                                height: 56, child: Image.asset("images/9.png")),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "YouTube",
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        height: 166,
+                        width: 166,
+                        color: Colors.grey[200],
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: 70,
+                              child: Image.asset("images/8.png"),
+                            ),
+                            Text(
+                              "Share This App",
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        height: 166,
+                        width: 166,
+                        color: Colors.grey[200],
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                                height: 70, child: Image.asset("images/7.png")),
+                            Text(
+                              "Rate This App",
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
