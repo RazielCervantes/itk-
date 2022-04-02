@@ -5,66 +5,98 @@ void main() => runApp(
       MaterialApp(
         home: Scaffold(
           body: Center(
-            child: Container(
-              height: 360,
-              width: 360,
-              color: Colors.grey[300],
-              child: Stack(
-                children: [
-                  SizedBox(
-                    height: double.infinity,
-                    width: double.infinity,
-                    child: Image.asset(
-                      "images/food.jpg",
-                      fit: BoxFit.cover,
-                    ),
+            child: Stack(
+              children: [
+                SizedBox(
+                  height: double.infinity,
+                  width: double.infinity,
+                  child: Image.asset(
+                    "images/2.jpg",
+                    fit: BoxFit.fill,
                   ),
-                  Align(
-                    alignment: Alignment.bottomLeft,
-                    child: Container(
-                      height: 80,
-                      color: Colors.black.withOpacity(0.5),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            child: CircleAvatar(
-                              backgroundImage: AssetImage("images/billie.jpeg"),
-                              radius: 24,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Container(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text(
-                                  "AppMaking.com",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.w500),
+                ),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: SizedBox(
+                    height: 210,
+                    width: 366,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          height: 60,
+                          width: 350,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                                primary: Colors.white,
+                                side: BorderSide(
+                                    width: 1.0, color: Colors.black)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                SizedBox(
+                                  height: 40,
+                                  width: 40,
+                                  child: Image.asset("images/3.png"),
                                 ),
-                                Text(
-                                  "5 mins ago",
+                                const Text(
+                                  "Continue with Google",
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 18),
+                                      fontSize: 22,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w400),
                                 ),
                               ],
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                        SizedBox(
+                          height: 60,
+                          width: 350,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.blue[900],
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                SizedBox(
+                                  height: 40,
+                                  width: 40,
+                                  child: Image.asset("images/5.png"),
+                                ),
+                                const Text(
+                                  "Continue with Facebook",
+                                  style: TextStyle(
+                                      fontSize: 22,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w400),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: const [
+                            Text(
+                              "By signing up you're accepting our terms and conditions",
+                              style:
+                                  TextStyle(fontSize: 18, color: Colors.white),
+                              textAlign: TextAlign.center,
+                            ),
+                            SizedBox(
+                              height: 14,
+                            )
+                          ],
+                        ),
+                      ],
                     ),
                   ),
-                ],
-              ),
+                )
+              ],
             ),
           ),
         ),
