@@ -4,59 +4,92 @@ import 'package:flutter/material.dart';
 void main() => runApp(
       MaterialApp(
         home: Scaffold(
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              SizedBox(child: Image.asset("images/food.jpg")),
-              Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+          body: Center(
+            child: Container(
+              margin: EdgeInsets.all(22),
+              height: 400,
+              color: Colors.grey[300],
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
                         children: [
-                          Text(
-                            "Deep dish pizza Chicago",
-                            style: TextStyle(
-                                fontSize: 22, fontWeight: FontWeight.w600),
+                          Container(
+                            padding: EdgeInsets.fromLTRB(12, 15, 10, 10),
+                            child: CircleAvatar(
+                              backgroundImage: AssetImage("images/billie.jpeg"),
+                              radius: 24,
+                            ),
                           ),
-                          Text(
-                            "30 mins",
-                            style: TextStyle(fontSize: 16),
-                          )
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text("AppMaking.com"),
+                              Text("5 mins ago"),
+                            ],
+                          ),
                         ],
                       ),
-                    ),
-                    IconButton(
-                      iconSize: 36,
-                      icon: Icon(Icons.favorite_border),
-                      onPressed: () {},
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.all(8),
-                child: Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et ex aliquet urna gravida aliquet. Ut iaculis, ipsum a convallis porttitor, ligula dui pulvinar velit, vel molestie libero felis sed metus. Morbi euismod odio leo, ut ornare purus dignissim a. Sed diam sapien, euismod vitae interdum vitae, maximus id felis. Nunc vitae sem urna. Donec sed justo vel sem consectetur ullamcorper sed quis risus. Nunc id iaculis dolor. Donec fringilla magna lobortis erat mollis, et egestas turpis fringilla. Vivamus enim ipsum, viverra vitae risus a, semper tempus erat. Vivamus nec maximus elit. Morbi scelerisque pharetra feugiat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt est sit amet risus blandit, sit amet faucibus magna varius. Sed feugiat purus nec nisl vestibulum sollicitudin. Morbi tincidunt nulla a velit sagittis, vitae feugiat odio volutpat. Phasellus a ultrices nisi. Proin efficitur ut diam vitae congue. Etiam condimentum massa non vulputate feugiat. Quisque a lectus vitae lorem luctus tempor et sed orci. Aliquam interdum blandit tellus, finibus euismod lectus molestie at."),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                height: 60,
-                width: 350,
-                child: ElevatedButton(
-                  child: Text(
-                    "SHARE",
-                    style: TextStyle(fontSize: 24),
+                      IconButton(
+                        icon: Icon(
+                          Icons.more_vert,
+                          size: 34,
+                        ),
+                        onPressed: () {},
+                      ),
+                    ],
                   ),
-                  onPressed: () {},
-                ),
+                  Container(
+                    padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
+                    child: Image.asset("images/food.jpg"),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      TextButton.icon(
+                        icon: Icon(
+                          Icons.favorite_border,
+                          size: 30,
+                        ),
+                        label: Text(
+                          "Like",
+                          style: TextStyle(fontSize: 20),
+                        ),
+                        onPressed: () {},
+                        style: TextButton.styleFrom(primary: Colors.black),
+                      ),
+                      TextButton.icon(
+                        icon: Icon(
+                          Icons.chat_bubble_outline,
+                          size: 30,
+                        ),
+                        label: Text(
+                          "Comment",
+                          style: TextStyle(fontSize: 20),
+                        ),
+                        onPressed: () {},
+                        style: TextButton.styleFrom(primary: Colors.black),
+                      ),
+                      TextButton.icon(
+                        icon: Icon(
+                          Icons.share_outlined,
+                          size: 30,
+                        ),
+                        label: Text(
+                          "Share",
+                          style: TextStyle(fontSize: 20),
+                        ),
+                        onPressed: () {},
+                        style: TextButton.styleFrom(primary: Colors.black),
+                      ),
+                    ],
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
         ),
       ),
