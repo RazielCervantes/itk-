@@ -1,5 +1,5 @@
- # task 16
+ # task 17
 
 ## Screenshot 
 
- ![screen16](Screenshots/screen_16_instagram_card.png)
+ ![screen17](Screenshots/screen_17_stack_product_ui.png)
