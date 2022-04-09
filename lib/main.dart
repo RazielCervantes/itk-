@@ -1,190 +1,196 @@
+// ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
+List myProducts = [
+  {
+    "product": "Samsung A1",
+    "cost": "400",
+    "time": "2",
+    "ImageUrl": "https://i.blogs.es/2b336d/samsung_galaxy_a01/1366_2000.jpg"
+  },
+  {
+    "product": "Laptop",
+    "cost": "999",
+    "time": "5",
+    "ImageUrl": "https://m.media-amazon.com/images/I/61bOLPZJ9ZL._AC_SY450_.jpg"
+  },
+  {
+    "product": "AirPods",
+    "cost": "999",
+    "time": "8 ",
+    "ImageUrl":
+        "https://www.backmarket.es/cdn-cgi/image/format=auto,quality=75,width=640/https://d1eh9yux7w8iql.cloudfront.net/product_images/308532_7b427385-34fc-40f5-9e68-73890ed77684.jpg"
+  },
+  {
+    "product": "Imac",
+    "cost": "11900",
+    "time": "10 ",
+    "ImageUrl": "https://ss628.liverpool.com.mx/xl/1098776369.jpg"
+  },
+  {
+    "product": "moto G5",
+    "cost": "200",
+    "time": "12",
+    "ImageUrl":
+        "https://androidayuda.com/wp-content/uploads/2017/01/Moto-G5-Plus-Oro.jpg"
+  },
+  {
+    "product": "Yeti Mic",
+    "cost": "876",
+    "time": "15 ",
+    "ImageUrl":
+        "https://s3.amazonaws.com/cd.bluemic.com/img/cart-cache/988-000100.jpg"
+  },
+  {
+    "product": "Alexa 4th Gen",
+    "cost": "600",
+    "time": "14",
+    "ImageUrl":
+        "https://m.media-amazon.com/images/I/61RuffqqI6L._AC_SL1000_.jpg"
+  },
+  {
+    "product": "LED Strip",
+    "cost": "223",
+    "time": "20 ",
+    "ImageUrl":
+        "https://i.linio.com/p/fcfdd46a4c6bde24a187a87f9089fc9d-product.jpg"
+  },
+];
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-@override
-enum SingingCharacter { male, female }
-
-class _MyAppState extends State<MyApp> {
-  get padding => null;
-
-  late TextEditingController _namectrl = TextEditingController();
-  late TextEditingController _emailctrl = TextEditingController();
-  late TextEditingController _numberctrl = TextEditingController();
-  late TextEditingController _passworldctrl = TextEditingController();
-
-  var _character;
-
-  bool isChecked = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Material App',
-      debugShowCheckedModeBanner: false,
-      home: SafeArea(
-        child: Scaffold(
-          appBar: AppBar(
-            title: const Text('Contact Form'),
-            backgroundColor: const Color.fromARGB(255, 1, 35, 63),
-            centerTitle: true,
-          ),
-          body: Column(
-            children: [
-              Container(
-                padding: const EdgeInsets.all(14),
-                width: double.infinity,
-                height: 300,
-                // color: Colors.amber,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    TextField(
-                      controller: _namectrl,
-                      keyboardType: TextInputType.name,
-                      decoration: const InputDecoration(
-                          filled: true,
-                          labelText: "Name",
-                          enabledBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Colors.black, width: 2.0),
-                          ),
-                          labelStyle:
-                              TextStyle(fontSize: 28, color: Colors.grey)),
-                    ),
-                    TextField(
-                      controller: _emailctrl,
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: const InputDecoration(
-                          labelText: "Email",
-                          enabledBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Colors.black, width: 2.0),
-                          ),
-                          labelStyle:
-                              TextStyle(fontSize: 28, color: Colors.grey)),
-                    ),
-                    TextField(
-                      keyboardType: TextInputType.number,
-                      controller: _numberctrl,
-                      decoration: const InputDecoration(
-                          labelText: "Number",
-                          enabledBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Colors.black, width: 2.0),
-                          ),
-                          labelStyle:
-                              TextStyle(fontSize: 28, color: Colors.grey)),
-                    ),
-                    TextField(
-                      keyboardType: TextInputType.visiblePassword,
-                      obscureText: true,
-                      controller: _passworldctrl,
-                      decoration: const InputDecoration(
-                          labelText: "Password",
-                          enabledBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Colors.black, width: 2.0),
-                          ),
-                          labelStyle:
-                              TextStyle(fontSize: 28, color: Colors.grey)),
-                    ),
-                  ],
+void main() => runApp(
+      MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: SafeArea(
+          child: Scaffold(
+            appBar: AppBar(
+              actions: [
+                IconButton(
+                  icon: const Icon(Icons.search),
+                  onPressed: () {},
                 ),
-              ),
-              Container(
-                // color: Colors.green,
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text("Gender"),
-                    ListTile(
-                      title: const Text('Male'),
-                      leading: Radio<SingingCharacter>(
-                        value: SingingCharacter.male,
-                        groupValue: _character,
-                        onChanged: (SingingCharacter? value) {
-                          setState(() {
-                            _character = value;
-                          });
-                        },
-                      ),
-                    ),
-                    ListTile(
-                      title: const Text('Female'),
-                      leading: Radio<SingingCharacter>(
-                        value: SingingCharacter.female,
-                        groupValue: _character,
-                        onChanged: (SingingCharacter? value) {
-                          setState(() {
-                            _character = value;
-                          });
-                        },
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 120.0,
-                    ),
-                    CheckboxListTile(
-                      title: const Text(
-                          "By signing up, I acept terms and conditions"),
-                      controlAffinity: ListTileControlAffinity.leading,
-                      checkColor: Colors.white,
-                      value: isChecked,
-                      onChanged: (bool? value) {
-                        setState(() {
-                          isChecked = value!;
-                        });
-                      },
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 60,
-                width: 360,
-                child: ElevatedButton(
-                  onPressed: () {
-                    // _showDialog(context);
-                  },
-                  child: const Text(
-                    "SUBMIT",
-                    style: TextStyle(fontSize: 30),
+                IconButton(
+                  icon: const Icon(Icons.shopping_cart),
+                  onPressed: () {},
+                )
+              ],
+            ),
+            body: Column(
+              children: [
+                SizedBox(
+                  height: 50,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: const [
+                      myOptionsType(namelabel: "Trending"),
+                      myOptionsType(namelabel: "Popular"),
+                      myOptionsType(namelabel: "Computers"),
+                      myOptionsType(namelabel: "Mobiles"),
+                      myOptionsType(namelabel: "Videogames"),
+                      myOptionsType(namelabel: "LEDs"),
+                      myOptionsType(namelabel: "Hardware"),
+                      myOptionsType(namelabel: "Peripherals"),
+                      myOptionsType(namelabel: "Cameras")
+                    ],
                   ),
                 ),
-              ),
-            ],
+                Expanded(
+                  child: ListView.builder(
+                    itemCount: myProducts.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Padding(
+                        padding: EdgeInsets.all(8),
+                        child: buildProduct(myProducts[index]),
+                      );
+                    },
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
     );
-  }
 
-  // void _showDialog(BuildContext context) {
-  //   showDialog(
-  //     context: context,
-  //     builder: (BuildContext context) {
-  //       return AlertDialog(
-  //         title: new Text("valores introducidos"),
-  //         content: new Text("Name: "),
-  //         actions: <Widget>[
-  //           new ElevatedButton(
-  //             child: new Text("OK"),
-  //             onPressed: () {
-  //               Navigator.of(context).pop();
-  //             },
-  //           ),
-  //         ],
-  //       );
-  //     },
-  //   );
-  // }
+class myOptionsType extends StatelessWidget {
+  final String? namelabel;
+  const myOptionsType({
+    Key? key,
+    required this.namelabel,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(10),
+      child: Container(
+        decoration: const BoxDecoration(
+            borderRadius: BorderRadius.all(
+              Radius.circular(18.0),
+            ),
+            color: Color.fromARGB(255, 222, 140, 204)),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(12, 0, 12, 0),
+          child: Center(
+            child: Text(
+              " $namelabel",
+              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
+            ),
+          ),
+        ),
+        padding: EdgeInsets.all(4),
+      ),
+    );
+  }
+}
+
+@override
+Widget buildProduct(Map myProducts) {
+  return Card(
+    child: Row(
+      children: [
+        SizedBox(
+          width: 100,
+          height: 100,
+          child: Image.network(myProducts["ImageUrl"]),
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              myProducts["product"],
+              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 24),
+            ),
+            Text(
+              myProducts["time"] + " mins ago",
+              style: TextStyle(fontSize: 12),
+            ),
+            Text(
+              "\$ " + myProducts["cost"],
+              style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  fontSize: 20,
+                  color: Colors.orange),
+            ),
+          ],
+        ),
+        Expanded(
+          child: Align(
+            alignment: Alignment.centerRight,
+            child: Column(
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.add_box),
+                  onPressed: () {},
+                ),
+                Text(
+                  "Add to shopCart",
+                  style: TextStyle(fontSize: 12),
+                )
+              ],
+            ),
+          ),
+        )
+      ],
+    ),
+  );
 }
